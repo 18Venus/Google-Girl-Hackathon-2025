@@ -15,9 +15,12 @@ app = Flask(__name__)
 # Apply CORS to all routes globally
 CORS(app)
 
-model_directory = r'D:\Google-Girl-Hackathon-2025\Model'
-model_path = os.path.join(model_directory, 'Model.pkl')
-scaler_path = os.path.join(model_directory, 'scaler.pkl')
+base_dir = os.path.dirname(__file__)
+
+# Define paths for the model and scaler files
+model_path = os.path.join(base_dir, "Model", "Model.pkl")
+scaler_path = os.path.join(base_dir, "Model", "scaler.pkl")
+
 
 with open(model_path, 'rb') as f:
     model = pickle.load(f)
