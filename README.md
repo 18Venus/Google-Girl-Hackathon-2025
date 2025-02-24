@@ -100,3 +100,5 @@ $ curl -X POST "http://localhost:5000/analyze" -H "Content-Type: application/jso
 
 ---
 
+## Note  
+This README provides an overview of the project, including its features, setup instructions, and key components. 
