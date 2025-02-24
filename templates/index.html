@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFunQi</title>
+   
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Header styling */
+        h1 {
+            color: #0b4262;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Textarea styling */
+        textarea {
+            width: 80%;
+            max-width: 800px;
+            min-width: 300px;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Styling for the score display */
+        h2 {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #555;
+        }
+
+        /* Responsive design for smaller screens */
+        @media screen and (max-width: 600px) {
+            textarea {
+                width: 90%;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to FunQi!</h1>
+    <h2>Submit Your Function Code for Quality Analysis</h2>
+    <form id="codeForm">
+        <textarea id="code" rows="10" cols="50" placeholder="Paste your code here..."></textarea><br><br>
+        <button type="submit">Submit Code</button>
+    </form>
+
+    <h2>Score: <span id="score"></span></h2>
+    <div id="suggestions"></div>
+
+
+    <!-- Use url_for to point to static files -->
+    <script>
+        document.getElementById('codeForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const code = document.getElementById('code').value;
+
+            fetch('http://localhost:5000/submit_code', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ code: code })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('score').innerText = data.score;
+
+                    // Display suggestions
+                    const suggestionsDiv = document.getElementById('suggestions');
+                    suggestionsDiv.innerHTML = ""; // Clear previous suggestions
+
+                    if (data.suggestions && data.suggestions.length > 0) {
+                        data.suggestions.forEach(suggestion => {
+                            const suggestionItem = document.createElement('p');
+                            suggestionItem.innerText = `✔️ ${suggestion}`;
+                            suggestionsDiv.appendChild(suggestionItem);
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+
+    </script>
+
+</body>
+
+</html>
