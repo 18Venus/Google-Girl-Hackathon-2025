@@ -4,7 +4,7 @@ FunQi (Function Quality Intelligence) is a **machine learning-powered platform**
 
 ## 🚀 Features
 - 📊 **Code Quality Analysis**: Extracts features like **cyclomatic complexity, modularity, function naming, comment quality, and more** from function.
-- 🤖 **Machine Learning-Powered**: Uses **trained ML models** (Random Forest) for accurate predictions of code quality score.
+- 🤖 **Machine Learning-Powered**: Uses **trained ML models** (Random Forest) for accurate predictions of code quality score (out of 10).
 - 🔍 **Detailed Feedback**: Provides suggestions to improve **code readability, maintainability, and efficiency**.
   
 ---
@@ -33,6 +33,33 @@ Current platforms focus on rule-based analysis or syntax correctness. FunQi aims
 
 ---
 ## ML Model Results
+
+Achieved MAE of 0.465 and R^2 of 96.7%
+
+![Random Forest Result](assets/RandomForestResult.png)
+
+
+---
+## Testing Web App on Python Functions
+For a poorly written function a score of 2.78 is given with following suggestions:
+![Code Analysis 5](assets/codeAnalysis5.png)
+
+For a well named and well commented code the score is 8.04:
+![Code Analysis 3](assets/codeAnalysis3.png)
+
+For a wrongly commented code the results are:
+![Code Analysis 4](assets/codeAnalysis4.png)
+
+For an uncommented function with a poor name:
+![Code Analysis 2](assets/codeAnalysis2.png)
+
+For a very long , uncommented function:
+![Code Analysis 1](assets/codeAnalysis1.png)
+
+
+
+
+
 
 ---
 
@@ -73,3 +100,5 @@ $ curl -X POST "http://localhost:5000/analyze" -H "Content-Type: application/jso
 
 ---
 
+## Note  
+This README provides an overview of the project, including its features, setup instructions, and key components. 
