@@ -1,10 +1,10 @@
 # FunQi - Function Quality Intelligence
 
-FunQi (Function Quality Intelligence) is a **machine learning-powered platform** that evaluates Python functions based on multiple code quality metrics. It provides **automated code quality scores** and **improvement suggestions**, making it useful for developers, software teams, and educators.
+FunQi (Function Quality Intelligence) is a **machine learning-powered platform** that evaluates Python functions based on multiple code quality metrics. It provides **automated code quality scores** and **improvement suggestions**, making it useful for developers, software teams, and educators. It is a step towards enchancing developer productivity by building Intelligent IDE.
 
 ##  Features
--  **Code Quality Analysis**: Extracts features like **cyclomatic complexity, modularity, function naming, comment quality, and more** from function.
--  **Machine Learning-Powered**: Uses **trained ML models** (Random Forest) for accurate predictions of code quality score (out of 10).
+-  **Code Analysis**: Extracts features like **cyclomatic complexity, modularity, function naming quality, comment quality, and more** from function.
+-  **Quality Score Prediction**: Uses **trained ML model** (Random Forest) for accurate predictions of code quality score (out of 10).
 -  **Detailed Feedback**: Provides suggestions to improve **code readability, maintainability, and efficiency**.
   
 ---
@@ -14,8 +14,8 @@ FunQi (Function Quality Intelligence) is a **machine learning-powered platform**
 Current platforms focus on rule-based analysis or syntax correctness. FunQi aims to **predict code quality dynamically** using machine learning.
 
 ### 2️⃣ Dataset Creation
-- Built a dataset with **six key parameters**: Cyclomatic Complexity, Loops, Function Length, Modularity, Comment Quality, and Naming Quality.
-- Assigned an **ideal quality score** based on these parameters for supervised learning.
+- Built a dataset with **six key parameters**: Cyclomatic Complexity, Number of Loops, Function Length, Modularity, Comment Quality, and Function Naming Quality.
+- Assigned a **quality score** based on these parameters for supervised learning.
 - [Dataset](https://drive.google.com/file/d/1nvn4jOvwmp0ijSLLtM7MOP0PMaFW076m/view?usp=drive_link)
 
 ### 3️⃣ Preprocessing & Model Training
