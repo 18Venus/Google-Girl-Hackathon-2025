@@ -16,11 +16,12 @@ Current platforms focus on rule-based analysis or syntax correctness. FunQi aims
 ### 2️⃣ Dataset Creation
 - Built a dataset with **six key parameters**: Cyclomatic Complexity, Loops, Function Length, Modularity, Comment Quality, and Naming Quality.
 - Assigned an **ideal quality score** based on these parameters for supervised learning.
+- [Dataset](https://drive.google.com/file/d/1nvn4jOvwmp0ijSLLtM7MOP0PMaFW076m/view?usp=drive_link)
 
 ### 3️⃣ Preprocessing & Model Training
 - Used **MinMaxScaler** for normalization.
 - Correlation analysis to validate meaningful features.
-- Trained multiple ML models (Random Forest, SVM, Gradient Boosting, KNN) and selected the best performers.
+- Trained multiple ML models (Random Forest, SVM, Gradient Boosting, KNN) and selected the best performer.
 
 ### 4️⃣ Algorithm for Metric Calculations
 - Extracts **AST-based** metrics using **Radon** and **custom Python functions**.
