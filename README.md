@@ -31,7 +31,7 @@ Current platforms focus on rule-based analysis or syntax correctness. FunQi aims
 - **Frontend**: HTML, CSS, JavaScript for UI.
 - **Testing**: Verified API responses using **Postman**.
 
-[For more details, refer to this document](https://drive.google.com/drive/folders/1JAvYrRC82LfXFibrep77lF5CCvMazL0V?usp=sharing)
+### [For more details, refer to this document](https://drive.google.com/drive/folders/1JAvYrRC82LfXFibrep77lF5CCvMazL0V?usp=sharing)
 
 ---
 ## ML Model Results
@@ -43,6 +43,9 @@ Achieved MAE of 0.465 and R^2 of 96.7%
 
 ---
 ## Testing Web App on Python Functions
+
+### [Demo Video](https://drive.google.com/file/d/1rudwVcTvoRlXZkE-sqgYI8HrD5Q_-e5A/view?usp=sharing)
+
 For a poorly written function a score of 2.78 is given with following suggestions:
 ![Code Analysis 5](assets/codeAnalysis5.png)
 
@@ -93,13 +96,6 @@ $ pip install -r requirements.txt
 ```sh
 $ python app.py
 ```
-
-### 🔹 API Usage
-Send a **POST request** with a Python function to analyze:
-```sh
-$ curl -X POST "http://localhost:5000/analyze" -H "Content-Type: application/json" -d '{"code": "def example():\n    print(\"Hello, World!\")"}'
-```
-
 ---
 
 ## Note  
