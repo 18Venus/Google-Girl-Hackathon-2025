@@ -83,8 +83,7 @@ For a very long , uncommented function:
 
 ### 🔹 Clone the Repository
 ```sh
-$ git clone https://github.com/yourusername/FunQi.git
-$ cd FunQi
+$ git clone https://github.com/18Venus/Google-Girl-Hackathon-2025.git
 ```
 
 ### 🔹 Install Dependencies
