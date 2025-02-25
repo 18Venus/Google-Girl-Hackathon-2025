@@ -62,6 +62,22 @@ For a very long , uncommented function:
 ![Code Analysis 1](assets/codeAnalysis1.png)
 
 
+---
+## Diagrams
+
+**Logic Flow Chart**
+
+![Logic Flow Chart](assets/LogicFlowChart.png)
+
+
+**Data Flow Diagram**
+
+![Data Flow](assets/DataFlow.png)
+
+
+### [Algorithm Flowchart](https://drive.google.com/file/d/1onUh792hTZ8d1RRse027DRzlTWaRRFjj/view?usp=drive_link)
+
+
 
 
 
