@@ -2,14 +2,14 @@
 
 FunQi (Function Quality Intelligence) is a **machine learning-powered platform** that evaluates Python functions based on multiple code quality metrics. It provides **automated code quality scores** and **improvement suggestions**, making it useful for developers, software teams, and educators.
 
-## 🚀 Features
-- 📊 **Code Quality Analysis**: Extracts features like **cyclomatic complexity, modularity, function naming, comment quality, and more** from function.
-- 🤖 **Machine Learning-Powered**: Uses **trained ML models** (Random Forest) for accurate predictions of code quality score (out of 10).
-- 🔍 **Detailed Feedback**: Provides suggestions to improve **code readability, maintainability, and efficiency**.
+##  Features
+-  **Code Quality Analysis**: Extracts features like **cyclomatic complexity, modularity, function naming, comment quality, and more** from function.
+-  **Machine Learning-Powered**: Uses **trained ML models** (Random Forest) for accurate predictions of code quality score (out of 10).
+-  **Detailed Feedback**: Provides suggestions to improve **code readability, maintainability, and efficiency**.
   
 ---
 
-## 🏗️ Architecture & Approach
+##  Architecture & Approach
 ### 1️⃣ Problem Identification & Goal
 Current platforms focus on rule-based analysis or syntax correctness. FunQi aims to **predict code quality dynamically** using machine learning.
 
@@ -30,6 +30,8 @@ Current platforms focus on rule-based analysis or syntax correctness. FunQi aims
 - **Backend**: Flask API for model inference.
 - **Frontend**: HTML, CSS, JavaScript for UI.
 - **Testing**: Verified API responses using **Postman**.
+
+[For more details, refer to this document](https://drive.google.com/drive/folders/1JAvYrRC82LfXFibrep77lF5CCvMazL0V?usp=sharing)
 
 ---
 ## ML Model Results
@@ -70,8 +72,8 @@ For a very long , uncommented function:
 - **Postman** (API Testing)
 ---
 
-## 📥 Installation & Usage
-### 🔧 Prerequisites
+##  Installation & Usage
+###  Prerequisites
 - Python 3.x
 - Flask
 - scikit-learn, NLTK, Radon
@@ -102,3 +104,4 @@ $ curl -X POST "http://localhost:5000/analyze" -H "Content-Type: application/jso
 
 ## Note  
 This README provides an overview of the project, including its features, setup instructions, and key components. 
+
